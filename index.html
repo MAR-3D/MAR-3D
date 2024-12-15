@@ -64,7 +64,10 @@
         <section>
             <h3>Method</h3>
             <p class="text-justify">
-                To fully utilize the scalability of Diffusion Transformer (DiT), our key idea is a novel 3D representation, namely <b>PrimX</b>. It explicitly encodes the 3D shape, textures, and materials of a textured mesh into a compact N x D tensor. Each token in this representation is a volumetric primitive anchored to the shape surface with voxelized payload to encode SDF, RGB, and materials. Here we visualize the process of denoising PrimX:
+                Overview of MAR-3D: (a) Pyramid VAE: It processes learnable tokens through separate cross-attention layers, taking multiresolution point clouds and normals as input to generate occupancy fields. (b) Cascaded MAR: Condition on image features extracted
+by CLIP and DINOv2, we employ a cascaded design: a MAR-LR model for generating low-resolution tokens, and a MAR-HR model
+for high-resolution token. The MAR architecture details are illustrated in the blue box. While MAR-LR and MAR-HR share the same
+architecture, they differ in the inputs: MAR-HR additionally requires low-resolution tokens as input (shown in the dashed box).
             </p>
             <img src="frame.png" alt="Method Framework" class="method-image">
         </section>
