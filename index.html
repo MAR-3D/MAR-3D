@@ -12,24 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!--FACEBOOK-->
-    <meta property="og:image" content="https://3dtopia.github.io/3DTopia-XL/img/teaser-web.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="682">
-    <meta property="og:image:height" content="682">
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://3dtopia.github.io/3DTopia-XL/"/>
-    <meta property="og:title" content="3DTopia-XL" />
-    <meta property="og:description" content="Project page for 3DTopia-XL: Scaling High-quality 3D Asset Generation via Primitive Diffusion" />
 
-        <!--TWITTER-->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="3DTopia-XL" />
-    <meta name="twitter:description" content="Project page for 3DTopia-XL: Scaling High-quality 3D Asset Generation via Primitive Diffusion" />
-    <meta name="twitter:image" content="https://3dtopia.github.io/3DTopia-XL/img/teaser-web.png" />
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
     <!-- <link rel="stylesheet" href="css/app.css"> -->
     <link rel="stylesheet" href="./css/stylesheet.css">
 
@@ -52,43 +35,14 @@
                 </small>
             </h1>
         </div>
-        <div class="row">
-                <div class="col-md-4 col-md-offset-4 text-center">
-                    <ul class="nav nav-pills nav-justified">
-                        <li>
-                            <a href="https://arxiv.org/abs/2409.12957">
-                            <image src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01-p-500.png" height="60px">
-                                <h4><strong>Paper</strong></h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://youtu.be/nscGSjrwMDw">
-                            <image src="img/youtube_icon.png" height="60px">
-                                <h4><strong>Video</strong></h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/3DTopia/3DTopia-XL">
-                            <img src="img/github.png" height="60px">
-                                <h4><strong>Code</strong></h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://huggingface.co/spaces/FrozenBurning/3DTopia-XL">
-                                <img src="img/hf-icon.png" height="60px">
-                                    <h4><strong>Demo</strong></h4>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-        </div>
+       
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Abstract
                 </h3>
                 <p class="text-justify">
-                        3DTopia-XL scales high-quality 3D asset generation using Diffusion Transformer (DiT) built upon an expressive and efficient 3D representation, <b>PrimX</b>. The denoising process takes 5 seconds to generate a 3D PBR asset from text / image input which is ready for graphics pipeline to use.
+                Recent advances in auto-regressive transformers have revolutionized generative modeling across domains, from language processing to visual generation, demonstrating remarkable capabilities. However, applying these advances to 3D generation presents three key challenges: the unordered nature of 3D data conflicts with sequential prediction paradigms, conventional vector quantization approaches incur substantial compression loss when applied to 3D meshes, and the lack of efficient scaling strategies for higher resolution. To address these limitations, we introduce MAR-3D, which integrates a pyramid variational autoencoder with a cascaded masked auto-regressive transformer (Cascaded MAR) for progressive latent token denoising. Our architecture employs random masking during training and auto-regressive denoising in random order during inference, naturally accommodating the unordered property of 3D latent tokens. Additionally, we propose a cascaded training strategy with condition augmentation that enables efficient up-scaling the latent token resolution. Extensive experiments demonstrate that MAR-3D not only achieves superior performance and generalization capabilities compared to existing methods but also exhibits enhanced scaling properties over joint distribution modeling approaches like diffusion transformers in 3D generation.
                 </p>
                 <video id="v0" width="100%" autoplay loop muted controls>
                     <source src="img/teaser.mp4" type="video/mp4" />
